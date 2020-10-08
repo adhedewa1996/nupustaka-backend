@@ -1,0 +1,10 @@
+[2020-01-15 21:01:14] local.ERROR: There are no commands defined in the "laravel" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"laravel\" namespace. at /var/www/app.nupustaka.com/vendor/symfony/console/Application.php:598)
+[stacktrace]
+#0 /var/www/app.nupustaka.com/vendor/symfony/console/Application.php(651): Symfony\\Component\\Console\\Application->findNamespace('laravel')
+#1 /var/www/app.nupustaka.com/vendor/symfony/console/Application.php(236): Symfony\\Component\\Console\\Application->find('laravel:tingker')
+#2 /var/www/app.nupustaka.com/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/app.nupustaka.com/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/app.nupustaka.com/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /var/www/app.nupustaka.com/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
