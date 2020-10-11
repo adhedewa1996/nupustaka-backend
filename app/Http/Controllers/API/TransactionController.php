@@ -85,7 +85,7 @@ class TransactionController extends BaseController
       $transaction->expired_at = Carbon::now()->addDays(7);
       $transaction->save();
 
-      $user->token = $user->token - $book->harga_pinjam;
+      // $user->token = $user->token - $book->harga_pinjam;
       $user->save();
 
       return $this->sendResponse($transaction, 'Peminjaman Berhasil.');
