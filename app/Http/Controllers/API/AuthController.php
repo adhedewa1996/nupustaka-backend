@@ -56,8 +56,8 @@ class AuthController extends BaseController
         $success['token_type'] =  'Bearer';
         $success['access_token'] =  $tokenResult->accessToken;
         $success['expires_at'] =  Carbon::parse(
-                                      $tokenResult->token->expires_at
-                                  )->toDateTimeString();
+            $tokenResult->token->expires_at
+        )->toDateTimeString();
 
         return $this->sendResponse($success, 'User login successfully.');
     }
