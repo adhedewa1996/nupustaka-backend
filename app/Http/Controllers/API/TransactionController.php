@@ -101,10 +101,10 @@ class TransactionController extends BaseController
     public function getPinjam(Request $request){
       $user = $request->user();
       $transaction = Transaction::with('books')
-        ->where([['user_id', '41'], ['status', 'pinjam']])
+        ->where([['user_id', $user->id], ['status', 'pinjam']])
         ->orderBy('id', 'DESC')
         ->get();
-      return $this->sendResponse($user, 'Pinjam Berhasil.');
+      return $this->sendResponse($user->id, 'Pinjam Berhasil.');
     }
     /**
      * Display a listing of the resource.
