@@ -104,7 +104,7 @@ class TransactionController extends BaseController
         ->where([['user_id', '41'], ['status', 'pinjam']])
         ->orderBy('id', 'DESC')
         ->get();
-      return $this->sendResponse($transaction, 'Pinjam Berhasil.');
+      return $this->sendResponse($user, 'Pinjam Berhasil.');
     }
     /**
      * Display a listing of the resource.
