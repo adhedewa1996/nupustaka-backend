@@ -58,9 +58,9 @@ class BookController extends BaseController {
     public function koleksiBook(Request $request){
       $user = $request->user();
       $koleksi = Book::with('wishlist')
-          ->whereHas('wishlist', function($q) use ($user){
-            $q->where('user_id', $user->id);
-          })->get();
+      ->whereHas('wishlist', function($q) use ($user){
+          $q->where('user_id', $user->id);
+      })->get();
       return $this->sendResponse($koleksi, 'Koleksi successfully');
     }
 
