@@ -64,7 +64,7 @@ class BookController extends BaseController {
       return $this->sendResponse($koleksi, 'Koleksi successfully');
     }
 
-    public function semuakoleksiku(Request $request){
+    public function koleksi2Book(Request $request){
       $user = $request->user();
       $koleksi = Book::with('transactions')
       ->where('user_id', $user->id)

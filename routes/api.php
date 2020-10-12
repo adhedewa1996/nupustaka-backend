@@ -39,6 +39,7 @@ Route::group([ 'prefix' => 'auth' ], function () {
         Route::get('cek/bookmark/book/{id}', 'API\BookController@cekBookmark');
 
         Route::get('koleksi/book', 'API\BookController@koleksiBook');
+        Route::get('koleksi2/book', 'API\BookController@koleksi2Book');
 
         Route::get('transaction/beli/{id}', 'API\TransactionController@beli');
         Route::get('cek/transaction/beli/{id}', 'API\TransactionController@cekBeli');
