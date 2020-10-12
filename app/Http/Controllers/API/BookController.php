@@ -11,6 +11,8 @@ use App\Category;
 use App\Wishlist;
 use App\Filedetail;
 use App\Filepage;
+use App\Transaction;
+
 class BookController extends BaseController {
     /**
      * Display a listing of the resource.
@@ -66,7 +68,7 @@ class BookController extends BaseController {
 
     public function koleksi2Book(Request $request){
       $user = $request->user();
-      $koleksi = Book::with('transactions')
+      $koleksi = Transaction::with('books')
       ->where('user_id', $user->id)
       ->where(now(), '<=' , 'expired_at')
       ->get();
