@@ -70,7 +70,7 @@ class BookController extends BaseController {
       $user = $request->user();
       $koleksi = Transaction::with('books')
       ->where('user_id', $user->id)
-      ->where(now(), '<=' , 'expired_at')
+      ->where(`now()`, '<=' , 'expired_at')
       ->get();
       return $this->sendResponse($koleksi, 'Semua Koleksi successfully');
     }
