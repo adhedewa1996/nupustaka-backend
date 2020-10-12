@@ -12,6 +12,7 @@ use App\Wishlist;
 use App\Filedetail;
 use App\Filepage;
 use App\Transaction;
+use Carbon\Carbon;
 
 class BookController extends BaseController {
     /**
@@ -68,9 +69,10 @@ class BookController extends BaseController {
 
     public function koleksi2Book(Request $request){
       $user = $request->user();
+      $dt = Carbon::now();
       $koleksi = Transaction::with('books')
       ->where('user_id', $user->id)
-      ->where('now()', '<=' , 'expired_at')
+      ->where($dt->toDateString(), '<=' , 'expired_at')
       ->get();
       return $this->sendResponse($koleksi, 'Semua Koleksi successfully');
     }
