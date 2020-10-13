@@ -111,6 +111,18 @@ class TransactionController extends BaseController
         ->get();
       return $this->sendResponse($transaction, 'Pinjam Berhasil.');
     }
+
+    public function getAll(Request $request){
+      $user = $request->user();
+      // $transaction = Transaction::with('books')
+      //   ->where([['user_id', $user->id], ['status', 'pinjam']])
+      //   ->orderBy('id', 'DESC')
+      //   ->get();
+      $transaction = Transaction::with('books')
+        ->Where([['user_id', $user->id]])
+        ->get();
+      return $this->sendResponse($transaction, 'Pinjam Berhasil.');
+    }
     /**
      * Display a listing of the resource.
      *
