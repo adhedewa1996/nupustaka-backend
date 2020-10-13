@@ -119,7 +119,7 @@ class TransactionController extends BaseController
       //   ->orderBy('id', 'DESC')
       //   ->get();
       $transaction = Transaction::with('books')
-        ->Where([['user_id', $user->id]])
+        ->Where([['user_id', $user->id], ['status', 'beli']])
         ->get();
       return $this->sendResponse($transaction, 'Pinjam Berhasil.');
     }
