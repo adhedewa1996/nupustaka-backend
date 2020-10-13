@@ -100,13 +100,8 @@ class TransactionController extends BaseController
 
     public function getPinjam(Request $request){
       $user = $request->user();
-      // $transaction = Transaction::with('books')
-      //   ->where([['user_id', $user->id], ['status', 'pinjam']])
-      //   ->orderBy('id', 'DESC')
-      //   ->get();
       $transaction = Transaction::with('books')
-        ->orWhere([['status', 'sewa'], ['status', 'pinjam']])
-        ->Where([['user_id', $user->id]])
+        ->where([['user_id', $user->id], ['status', 'pinjam']])
         ->orderBy('id', 'DESC')
         ->get();
       return $this->sendResponse($transaction, 'Pinjam Berhasil.');
