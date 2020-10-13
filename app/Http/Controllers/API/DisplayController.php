@@ -15,7 +15,9 @@ class DisplayController extends BaseController
      * @return \Illuminate\Http\Response
      */
     public function index() {
-      $displays = Display::with('books')->get();
+      $displays = Display::with('books')
+      ->where('id', '!=', '1')
+      ->get();
       return $this->sendResponse($displays, 'Display successfully.');
     }
 
