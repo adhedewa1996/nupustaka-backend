@@ -16,7 +16,7 @@ class DisplayController extends BaseController
      */
     public function index() {
       $displays = Display::with('books')
-      ->where('id', '!=', '1')
+      ->where('display_id', '!=', '1')
       ->get();
       return $this->sendResponse($displays, 'Display successfully.');
     }
