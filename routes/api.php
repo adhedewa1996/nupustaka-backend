@@ -50,6 +50,7 @@ Route::group([ 'prefix' => 'auth' ], function () {
         Route::get('transaction/pinjam/{id}', 'API\TransactionController@pinjam');
         Route::get('cek/transaction/pinjam/{id}', 'API\TransactionController@cekPinjam');
         Route::get('get/transaction/pinjam', 'API\TransactionController@getPinjam');
+        Route::get('get/transaction/all', 'API\TransactionController@getAll');
 
         Route::get('voucher/redeem/{id}', 'API\VoucherController@redeem');
 
