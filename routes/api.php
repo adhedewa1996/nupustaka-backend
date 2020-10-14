@@ -25,8 +25,8 @@ Route::group([ 'prefix' => 'auth' ], function () {
     Route::group([ 'middleware' => 'auth:api' ], function() {
         Route::get('logout', 'API\AuthController@logout');
         Route::get('user', 'API\AuthController@user');
-        Route::post('broadcasting/auth', 'API\AuthController@broaduser');
-        Route::post('daftar', 'API\AuthController@daftar');
+        // Route::post('broadcasting/auth', 'API\AuthController@broaduser');
+        Route::post('simpanUser', 'API\AuthController@simpanUser');
 
         Route::get('categories', 'API\CategoryController@index');
         Route::get('categories/unisma', 'API\CategoryController@categoryUnisma');
