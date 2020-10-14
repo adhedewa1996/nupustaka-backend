@@ -80,6 +80,7 @@ class AuthController extends BaseController
         $update->email = $request->email;
         $update->phone = $request->phone;
         $update->save();
-        return response()->json($update, 200);
+        // return response()->json($update, 'Success');
+        return $this->sendResponse($update, 'Success');
     }
 }
