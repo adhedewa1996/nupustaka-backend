@@ -26,6 +26,7 @@ Route::group([ 'prefix' => 'auth' ], function () {
         Route::get('logout', 'API\AuthController@logout');
         Route::get('user', 'API\AuthController@user');
         Route::post('broadcasting/auth', 'API\AuthController@broaduser');
+        Route::post('daftar', 'API\AuthController@daftar');
 
         Route::get('categories', 'API\CategoryController@index');
         Route::get('categories/unisma', 'API\CategoryController@categoryUnisma');
