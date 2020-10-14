@@ -74,7 +74,7 @@ class AuthController extends BaseController
         return $this->sendResponse($request->user(), 'successfully');
     }
 
-    public function daftar(Request $request){
+    public function simpanUser(Request $request){
         $update = User::find($request->user()->id);
         $update->name = $request->name;
         $update->email = $request->email;
