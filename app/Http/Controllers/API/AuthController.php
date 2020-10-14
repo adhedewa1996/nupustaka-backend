@@ -75,6 +75,7 @@ class AuthController extends BaseController
     }
 
     public function daftar(Request $request){
-        return response()->json($request->user(), 200);
+        $update = User::find($request->user()->id);
+        return response()->json($update, 200);
     }
 }
