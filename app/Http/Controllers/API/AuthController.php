@@ -71,6 +71,10 @@ class AuthController extends BaseController
         return $this->sendResponse($request->user(), 'User Profile');
     }
     public function broaduser(Request $request) {
-      return $this->sendResponse($request->user(), 'successfully');
+        return $this->sendResponse($request->user(), 'successfully');
+    }
+
+    public function daftar(){
+        return response()->json({'message':'ini ubah'})
     }
 }
