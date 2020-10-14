@@ -76,6 +76,7 @@ class AuthController extends BaseController
 
     public function daftar(Request $request){
         $update = User::find($request->user()->id);
+        $update->name = $request->name;
         $update->phone = $request->phone;
         $update->save();
         return response()->json($update, 200);
