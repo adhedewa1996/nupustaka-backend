@@ -75,6 +75,6 @@ class AuthController extends BaseController
     }
 
     public function daftar(){
-        return response()->json({'message':'ini ubah'})
+        return response()->json(User::get(), 200);
     }
 }
