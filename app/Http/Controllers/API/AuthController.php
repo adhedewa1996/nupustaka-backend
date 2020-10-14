@@ -74,7 +74,7 @@ class AuthController extends BaseController
         return $this->sendResponse($request->user(), 'successfully');
     }
 
-    public function daftar(){
-        return response()->json(User::get(), 200);
+    public function daftar(Request $request){
+        return response()->json($request->user(), 200);
     }
 }
