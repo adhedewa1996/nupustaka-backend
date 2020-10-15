@@ -35,9 +35,10 @@ class VoucherController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function history(Request $request, $id)
     {
-        //
+        $user = $request->user();
+        return $this->sendResponse($user, 'History User')
     }
 
     /**

@@ -53,6 +53,7 @@ Route::group([ 'prefix' => 'auth' ], function () {
         Route::get('get/transaction/pinjam', 'API\TransactionController@getPinjam');
         Route::get('get/transaction/all', 'API\TransactionController@getAll');
 
+        Route::get('history/redeem', 'API\VoucherController@history');
         Route::get('voucher/redeem/{id}', 'API\VoucherController@redeem');
 
         Route::get('books', 'API\SearchController@show');
