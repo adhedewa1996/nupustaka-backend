@@ -27,6 +27,7 @@ Route::group([ 'prefix' => 'auth' ], function () {
         Route::get('user', 'API\AuthController@user');
         // Route::post('broadcasting/auth', 'API\AuthController@broaduser');
         Route::post('simpanUser', 'API\AuthController@simpanUser');
+        Route::post('updatePassword', 'API\AuthController@updatePassword');
 
         Route::get('categories', 'API\CategoryController@index');
         Route::get('categories/unisma', 'API\CategoryController@categoryUnisma');

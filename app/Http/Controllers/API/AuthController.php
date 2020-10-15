@@ -83,4 +83,21 @@ class AuthController extends BaseController
         // return response()->json($update, 'Success');
         return $this->sendResponse($update, 'Success');
     }
+
+    public function updatePassword(Request $request){
+        $validator = Validator::make($request->all(), [
+            'password' => 'required',
+            'c_password' => 'required|same:password',
+        ]);
+
+        if($validator->fails()){
+            return $this->sendError('Validation Error.', $validator->errors());
+        }
+
+        $update = User::find($request->user()->id);
+        $update->password = bcrypt($request->password);
+        $update->save();
+
+        return $this->sendResponse($update, 'Success');
+    }
 }
