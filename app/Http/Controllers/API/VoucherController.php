@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\API\BaseController as BaseController;
+use App\UserTransactionToken;
 use Illuminate\Http\Request;
 use App\Voucher;
 
@@ -12,9 +13,14 @@ class VoucherController extends BaseController
     public function redeem(Request $request, $id){
       $user = $request->user();
       $voucher = Voucher::where('code', $id)->first();
+      $history = new UserTransactionToken;
       if($voucher){
         $user->token = $user->token + $voucher->token_amount;
         $user->save();
+
+        $history->user_id = $user->id;
+        $history->voucher_id = $voucher->id;
+        $history->save();
 
         return $this->sendResponse($user, 'Voucher redeem successfully.');
       } else {
