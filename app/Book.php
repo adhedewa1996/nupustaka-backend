@@ -20,7 +20,7 @@ class Book extends Model {
 
   public function wishlist(){
      return $this->hasMany(Wishlist::class);
-  } 
+  }
 
   public function display(){
      return $this->belongsToMany(Display::class, 'book_displays');

@@ -38,8 +38,8 @@ class VoucherController extends BaseController
     public function history(Request $request)
     {
         $user = $request->user();
-        $history = UserTransactionToken::with('vouchers')
-        ->join('user', '=', $user->id)
+        $history = UserTransactionToken::with('voucher')
+        ->where('user_id', $user->id)
         ->get();;
         return $this->sendResponse($history, 'History User');
     }
