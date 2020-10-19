@@ -34,9 +34,7 @@
           </table>
         </div>
       </div>
-      <div class="card-footer text-muted">
-        2 days ago
-      </div>
+      
     </div>
 <?php $__env->stopSection(); ?>
 

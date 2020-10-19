@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Transactions Dashboard</h1>
+    <h1>Dashboard Transaksi</h1>
 @stop
 
 @section('content')
@@ -11,9 +11,9 @@
     <div class="row">
       <div class="col-md-12">
         <div class="card">
-          <div class="card-header">
+          {{-- <div class="card-header">
               <p>Welcome to this Transactions admin panel.</p>
-          </div>
+          </div> --}}
           <div class="card-body">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item">
@@ -45,7 +45,7 @@
                     <table class="table table-inverse" id="sewa_datatable">
                        <thead>
                           <tr>
-                            <th width="10px">Id</th>
+                            <th width="10px">No</th>
                             <th>Rental Name</th>
                             <th>Book Title</th>
                             <th width="100px">Date Rental</th>
@@ -57,7 +57,7 @@
                        <tbody>
                          @foreach ($data as $key => $value)
                          <tr>
-                           <td>{{$value->id}}</td>
+                           <td>{{$key+1}}</td>
                            <td>{{$value->name}}</td>
                            <td>{{$value->title}}</td>
                            <td>{{date('d F Y', strtotime($value->created_at))}}</td>

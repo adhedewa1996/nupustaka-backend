@@ -200,6 +200,11 @@ return [
             'icon' => 'fas fa-book',
         ],
         [
+            'text' => 'Tentang',
+            'url'  => 'admin/tentang',
+            'icon' => 'fas fa-book',
+        ],
+        [
             'text' => 'Transactions',
             'url'  => 'admin/transactions',
             'icon' => 'fas fa-cash-register',

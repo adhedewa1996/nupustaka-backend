@@ -1,7 +1,7 @@
 <?php $__env->startSection('title', 'Dashboard'); ?>
 
 <?php $__env->startSection('content_header'); ?>
-    <h1>Transactions Dashboard</h1>
+    <h1>Dashboard Transaksi</h1>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
@@ -9,14 +9,12 @@
     <div class="row">
       <div class="col-md-12">
         <div class="card">
-          <div class="card-header">
-              <p>Welcome to this Transactions admin panel.</p>
-          </div>
+          
           <div class="card-body">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-                  <h5 class="mb-0">
+                  <h5 class="mb-6">
                     Sewa <i class="fas fa-shopping-bag"></i>
                   </h5>
                 </a>
@@ -43,7 +41,7 @@
                     <table class="table table-inverse" id="sewa_datatable">
                        <thead>
                           <tr>
-                            <th width="10px">Id</th>
+                            <th width="10px">No</th>
                             <th>Rental Name</th>
                             <th>Book Title</th>
                             <th width="100px">Date Rental</th>
@@ -55,7 +53,7 @@
                        <tbody>
                          <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                          <tr>
-                           <td><?php echo e($value->id); ?></td>
+                           <td><?php echo e($key+1); ?></td>
                            <td><?php echo e($value->name); ?></td>
                            <td><?php echo e($value->title); ?></td>
                            <td><?php echo e(date('d F Y', strtotime($value->created_at))); ?></td>

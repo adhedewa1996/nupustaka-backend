@@ -195,7 +195,7 @@
                     { data: 'title', name: 'Title' },
                     { data: 'description', name: 'Description' },
                     { data: 'harga_sewa', name: 'Rental price' },
-                    {data: 'action', name: 'action', orderable: false, searchable: false}
+                    { data: 'action', name: 'action', orderable: false, searchable: false }
                  ]
         });
      });

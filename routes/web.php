@@ -28,6 +28,15 @@ Route::get('admin/category/edit/{id}', 'Admin\CategoryController@edit');
 Route::post('admin/category/update/{id}', 'Admin\CategoryController@update');
 Route::get('admin/category/delete/{id}', 'Admin\CategoryController@delete');
 
+//
+Auth::routes();
+Route::get('/admin/tentang', 'Admin\TentangController@index');
+Route::post('/admin/tentang/store', 'Admin\TentangController@store');
+Route::get('admin/tentang/edit/{id}', 'Admin\TentangController@edit');
+Route::post('admin/tentang/update/{id}', 'Admin\TentangController@update');
+Route::get('admin/tentang/delete/{id}', 'Admin\TentangController@delete');
+//
+
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 

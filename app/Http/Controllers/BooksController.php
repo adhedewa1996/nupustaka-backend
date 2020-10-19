@@ -53,6 +53,7 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
+      dd($request);
       // $this->validate($request,[
       //   'title'=>'required',
       //   'deskription'=>'required',
