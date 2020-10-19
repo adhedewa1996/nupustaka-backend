@@ -17,6 +17,7 @@ class CreateTentangTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_organisasi');
             $table->longText('deksripsi');
+            $table->longText('alamat');
             $table->char('no_telp', 13);
             $table->string('email')->unique();
             $table->timestamps();
