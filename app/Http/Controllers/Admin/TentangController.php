@@ -20,6 +20,7 @@ class TentangController extends Controller
         $tentang->nama_organisasi = $request->nama_organisasi;
         $tentang->deskripsi = $request->deskripsi;
         $tentang->email = $request->email;
+        $tentang->alamat = $request->alamat;
         $tentang->no_telp = $request->no_telp;
         $tentang->save();
 

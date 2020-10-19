@@ -28,6 +28,12 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
+                            <label>Alamat</label>
+                            <input type="text" name="alamat" class="form-control" value="{{$tentang->alamat}}">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
                             <label>No Telpon</label>
                             <input type="text" name="no_telp" class="form-control" value="{{$tentang->no_telp}}">
                         </div>

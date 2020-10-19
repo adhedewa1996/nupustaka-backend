@@ -16,7 +16,7 @@ class CreateTentangTable extends Migration
         Schema::create('tentang', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_organisasi');
-            $table->longText('deksripsi');
+            $table->longText('deskripsi');
             $table->longText('alamat');
             $table->char('no_telp', 13);
             $table->string('email');

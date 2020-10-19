@@ -36,6 +36,12 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
+                                        <label>Alamat</label>
+                                        <input type="text" name="alamat" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
                                         <label>No Telpon</label>
                                         <input type="text" name="no_telp" class="form-control">
                                     </div>
@@ -64,6 +70,7 @@
                                          <th>Nama Organisasi</th>
                                          <th>Deskripsi</th>
                                          <th>Email</th>
+                                         <th>Alamat</th>
                                          <th>No Telp</th>
                                          <th width="10%">Action</th>
                                       </tr>
@@ -75,6 +82,7 @@
                                        <td>{{$tentang->nama_organisasi}}</td>
                                        <td>{{$tentang->deskripsi}}</td>
                                        <td>{{$tentang->email}}</td>
+                                       <td>{{$tentang->alamat}}</td>
                                        <td>{{$tentang->no_telp}}</td>
                                        <td><a href="{{url('admin/tentang/delete/'.$tentang->id)}}" class="btn btn-danger btn-xs">Delete</a>
                                        <a href="{{url('admin/tentang/edit/'.$tentang->id)}}" class="btn btn-warning btn-xs">Edit</a></td>
