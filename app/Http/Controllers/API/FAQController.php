@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Category;
 use App\FAQ;
 use App\FAQCategory;
 use App\Http\Controllers\Controller;
@@ -11,7 +12,7 @@ use Illuminate\Http\Request;
 class FAQController extends BaseController
 {
     public function index() {
-        $faq = FAQCategory::with('faq')->get();
+        $faq = Category::with('books')->get();
         return $this->sendResponse($faq, 'Faq successfully.');
     }
 }
