@@ -63,7 +63,9 @@ Route::group([ 'prefix' => 'auth' ], function () {
         Route::get('display', 'API\DisplayController@index');
         Route::get('display/{id}', 'API\DisplayController@show');
 
-        Route::get('tentang', 'API\TentangController@index');
+        Route::get('tentang', 'API\TentangController@index');;
+
+        Route::get('faq', 'API\FAQController@index');
     });
 });
 
