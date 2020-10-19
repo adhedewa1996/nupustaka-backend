@@ -200,9 +200,14 @@ return [
             'icon' => 'fas fa-book',
         ],
         [
-            'text' => 'Tentang',
+            'text' => 'About',
             'url'  => 'admin/tentang',
-            'icon' => 'fas fa-book',
+            'icon' => 'fas fa-info',
+        ],
+        [
+            'text' => 'FAQ',
+            'url'  => 'admin/faq',
+            'icon' => 'fas fa-question',
         ],
         [
             'text' => 'Transactions',
